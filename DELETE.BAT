@@ -6,7 +6,7 @@ pushd %~dp0
 Set input=
 
 :Begin
-Set /P input="要刪除舊注音嗎？請輸入Y(執行)/N(離開) "
+Set /P input="要刪除舊注音嗎？請輸入Y(是)/N(否) "
 If /I "%input%"=="Y" Goto check
 If /I "%input%"=="N" Goto End
 Echo 不正確的輸入，請重新輸入。
