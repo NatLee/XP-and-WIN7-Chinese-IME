@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layouts\E0010404]
+"Layout Display Name"="中文 (繁體) - XP注音"
+"IME File"="phonXP.ime"
+"Layout Text"="中文 (繁體) - XP注音"
+"Layout File"="KBDUS.DLL"
