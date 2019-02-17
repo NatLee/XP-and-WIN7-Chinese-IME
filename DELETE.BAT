@@ -23,21 +23,11 @@ pause
 Goto End
 
 :X64
-DEL %windir%\System32\phon.tbl /Q /F
-DEL %windir%\System32\phoncode.tbl /Q /F
-DEL %windir%\System32\phonptr.tbl /Q /F
-DEL %windir%\System32\phonXP.ime /Q /F
-DEL %windir%\System32\uniime.dll /Q /F
-
 DEL %windir%\SysWOW64\phon.tbl /Q /F
 DEL %windir%\SysWOW64\phoncode.tbl /Q /F
 DEL %windir%\SysWOW64\phonptr.tbl /Q /F
 DEL %windir%\SysWOW64\phonXP.ime /Q /F
 DEL %windir%\SysWOW64\uniime.dll /Q /F
-
-REG DELETE .\old_typer_ver_bat\REG.reg
-Goto WIN7Option
-
 
 :X86
 DEL %windir%\System32\phon.tbl /Q /F
@@ -46,14 +36,10 @@ DEL %windir%\System32\phonptr.tbl /Q /F
 DEL %windir%\System32\phonXP.ime /Q /F
 DEL %windir%\System32\uniime.dll /Q /F
 
-REG DELETE /s .\old_typer_ver_bat\REG.reg
-Goto WIN7Option
-
-:WIN7Option
-REG DELETE /s .\old_typer_ver_bat\Win7.reg
+REG DELETE "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layouts\E0010404" /va
+REG DELETE "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CTF\TIP\{B115690A-EA02-48D5-A231-E3578D2FDF80}\LanguageProfile\0x00000404\{761309DE-317A-11D4-9B5D-0080C882687E}" /va
 
 echo §R°£¦¨¥\¡I
 pause
-Goto End
 
 :End

@@ -24,26 +24,17 @@ pause
 Goto End
 
 :X64
-Xcopy /s/f .\old_typer_ver_bat\System32\*.* %windir%\System32
 Xcopy /s/f .\old_typer_ver_bat\SysWOW64\*.* %windir%\SysWOW64
-regedit /s .\old_typer_ver_bat\REG.reg
-Goto WIN7Option
-
 :X86
 Xcopy /s/f .\old_typer_ver_bat\System32\*.* %windir%\System32
 regedit /s .\old_typer_ver_bat\REG.reg
-Goto WIN7Option
 
-:WIN7Option
 Set /P input="要安裝WIN7舊注音嗎？請輸入Y(是)/N(否) "
-If /I "%input%"=="Y" Goto InstallWIN7Typer
 If /I "%input%"=="N" Goto End
 
-:InstallWIN7Typer
 regedit /s .\old_typer_ver_bat\Win7.reg
 echo 安裝成功，請於設定中「變更輸入法」確認！
 echo 若無法使用，請重開機再次確認！
 pause
-Goto End
 
 :End
