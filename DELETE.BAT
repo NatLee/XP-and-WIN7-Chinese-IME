@@ -6,7 +6,7 @@ pushd %~dp0
 Set input=
 
 :Begin
-Set /P input="要刪除舊注音嗎？請輸入Y(是)/N(否) "
+Set /P input="要刪除所有舊注音嗎？請輸入Y(是)/N(否) "
 If /I "%input%"=="Y" Goto check
 If /I "%input%"=="N" Goto End
 Echo 不正確的輸入，請重新輸入。
@@ -40,6 +40,7 @@ REG DELETE "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layouts
 REG DELETE "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CTF\TIP\{B115690A-EA02-48D5-A231-E3578D2FDF80}\LanguageProfile\0x00000404\{761309DE-317A-11D4-9B5D-0080C882687E}" /va
 
 echo 刪除成功！
+echo 請檢查輸入法，若有問題請重新啟動電腦！
 pause
 
 :End

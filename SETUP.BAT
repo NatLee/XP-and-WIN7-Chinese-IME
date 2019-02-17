@@ -29,6 +29,7 @@ Xcopy /s/f .\old_typer_ver_bat\SysWOW64\*.* %windir%\SysWOW64
 Xcopy /s/f .\old_typer_ver_bat\System32\*.* %windir%\System32
 regedit /s .\old_typer_ver_bat\REG.reg
 
+:WIN7Option
 Set /P input="要安裝WIN7舊注音嗎？請輸入Y(是)/N(否) "
 If /I "%input%"=="N" Goto End
 
